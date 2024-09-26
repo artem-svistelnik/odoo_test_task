@@ -20,10 +20,3 @@ stop:
 
 cmd:
 	docker-compose run $(runargs)
-
-dump:
-	docker compose exec database pg_dump -U odoo_db -d new_db -f /dump.sql
-	docker compose cp database:/dump.sql ./dump.sql
-
-load:
-	cat dump.sql | docker

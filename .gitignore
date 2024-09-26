@@ -17,6 +17,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 .env
+odoo.conf
 .venv
 env/
 venv/
