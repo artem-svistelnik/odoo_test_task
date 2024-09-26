@@ -27,5 +27,4 @@ venv.bak/
 .pytype/
 cython_debug/
 .idea/
-*xml
 pg_data/

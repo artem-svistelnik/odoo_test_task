@@ -7,16 +7,23 @@ ifeq (cmd, $(firstword $(MAKECMDGOALS)))
 endif
 
 build:
-	docker build . -t odoo-app -f odoo/Dockerfile
+	docker-compose up --build
 
 run:
-	docker compose up
+	docker-compose up
 
 restart:
-	docker compose stop && docker compose up -d
+	docker-compose stop && docker compose up -d
 
 stop:
-	docker compose stop
+	docker-compose stop
 
 cmd:
-	docker compose run $(runargs)
+	docker-compose run $(runargs)
+
+dump:
+	docker compose exec database pg_dump -U odoo_db -d new_db -f /dump.sql
+	docker compose cp database:/dump.sql ./dump.sql
+
+load:
+	cat dump.sql | docker

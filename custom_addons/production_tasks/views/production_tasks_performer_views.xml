@@ -1,0 +1,27 @@
+<odoo>
+    <record id="view_performer_form" model="ir.ui.view">
+        <field name="name">production_task.form</field>
+        <field name="model">production_tasks.performer</field>
+        <field name="arch" type="xml">
+            <form string="Performer">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_performer_tree" model="ir.ui.view">
+        <field name="name">production_task.tree</field>
+        <field name="model">production_tasks.performer</field>
+        <field name="arch" type="xml">
+            <tree string="Performers">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

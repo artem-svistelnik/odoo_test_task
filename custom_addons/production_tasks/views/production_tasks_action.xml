@@ -1,0 +1,12 @@
+<odoo>
+    <record id="action_production_performer" model="ir.actions.act_window">
+        <field name="name">Performers</field>
+        <field name="res_model">production_tasks.performer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_production_task" model="ir.actions.act_window">
+        <field name="name">Production Tasks</field>
+        <field name="res_model">production_tasks.task</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
