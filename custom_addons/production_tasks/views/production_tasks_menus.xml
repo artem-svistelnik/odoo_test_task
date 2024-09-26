@@ -1,0 +1,5 @@
+<odoo>
+     <menuitem id="menu_production_task_root" name="Production" sequence="1"/>
+     <menuitem id="menu_production_task" name="Tasks" parent="menu_production_task_root" action="action_production_task"/>
+     <menuitem id="menu_production_performer" name="Performers" parent="menu_production_task_root" action="action_production_performer"/>
+</odoo>

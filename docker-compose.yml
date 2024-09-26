@@ -11,13 +11,17 @@ services:
       - data:/var/lib/odoo
       - ./custom_addons:/opt/odoo/customaddons
       - ./odoo.conf:/etc/odoo/odoo.conf
-    command: [ "-d", "new_db", "--update", "all"]
+    command: --update all
 
   database:
     image: postgres:15
     env_file: .env
     volumes:
-      - db:/var/lib/postgresql/data/pgdata
+      - ./pg_data:/var/lib/postgresql/data
+    command: -p 5432
+
+    ports:
+      - "5432:5432"
 
 
 volumes:
